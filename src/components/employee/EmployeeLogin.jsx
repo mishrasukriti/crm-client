@@ -114,7 +114,7 @@ const EmployeeLogin = () => {
                 style={{ marginLeft: "2rem" }}
                 onClick={(event) => {
                   event.preventDefault();
-                  history.push("/#Login");
+                  history.push("/");
                 }}
               >
                 Back
