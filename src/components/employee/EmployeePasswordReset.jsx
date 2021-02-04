@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ErrorMsg from './ErrorMsg';
+import ErrorMsg from '../ErrorMsg';
 import { useHistory } from "react-router-dom";
-import Illustration from "../assets/illustration.png";
+import Illustration from "../../assets/illustration.png";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 
-const PasswordReset = () => {
+const EmployeePasswordReset = () => {
     const [password, setPassword] = useState("");
     const [reEnteredpPassword, setReEnteredpPassword] = useState("");
 
@@ -126,4 +126,4 @@ const PasswordReset = () => {
     );
     };
 
-export default PasswordReset;
+export default EmployeePasswordReset;

@@ -53,13 +53,15 @@ import EmployeeContacts from "./components/employee/Contact/Contacts";
 import EmployeeChangePassword from "./components/employee/EmployeeChangePassword";
 import ManagerChangePassword from "./components/manager/ManagerChangePassword";
 import AdminChangePassword from "./components/admin/AdminChangePassword";
-import PasswordReset from "./components/PasswordReset"
 
 import AdminDashboardMain from './components/admin/dashboard/dash';
 import ManagerDashboardMain from './components/manager/dashboard/dash';
 import EmployeeDashboardMain from './components/employee/dashboard/dash';
 
 import "./styles/style.css";
+import AdminPasswordReset from "./components/admin/AdminPasswordReset";
+import ManagerPasswordReset from "./components/manager/ManagerPasswordReset";
+import EmployeePasswordReset from "./components/employee/EmployeePasswordReset";
 
 const App = () => {
   return (
@@ -72,7 +74,7 @@ const App = () => {
           <Route path="/employeedashboard/dashboardMain"  component={EmployeeDashboardMain} />
 
           <Route path="/" exact component={() => <LandingPage />} />
-          <Route path="/passwordreset" exact component={() => <PasswordReset />} />
+          <Route path="/admin/passwordreset" exact component={() => <AdminPasswordReset />} />
           <Route path="/adminlogin" exact component={() => <AdminLogin />} />
           <Route path="/adminchangepassword" exact component={() => <AdminChangePassword />} />
           <Route
@@ -166,6 +168,7 @@ const App = () => {
             path="/managerdashboard/contact/:id"
             component={ManagerContacts}
           />
+          <Route path="/manager/passwordreset" exact component={() => <ManagerPasswordReset />} />
           <Route
             path="/employeelogin"
             exact
@@ -217,6 +220,7 @@ const App = () => {
             exact
             component={EmployeeContacts}
           />
+          <Route path="/employee/passwordreset" exact component={() => <EmployeePasswordReset />} />
         </Switch>
       </Router>
     </React.Fragment>
