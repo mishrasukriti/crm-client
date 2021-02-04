@@ -15,7 +15,7 @@ const ServiceRequest = ({ match }) => {
   const dispatch = useDispatch();
 
   const url =
-    "http://localhost:4050/api/admindashboard/servicerequest";
+    "https://sukriti-crm-server.herokuapp.com/api/admindashboard/servicerequest";
 
   const delServiceRequest = (id) => {
     const token = localStorage.getItem("token");

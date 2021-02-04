@@ -16,7 +16,7 @@ const Lead = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     const url =
-      "http://localhost:4050/api/employeedashboard/lead";
+      "https://sukriti-crm-server.herokuapp.com/api/employeedashboard/lead";
     const getLeads = async () => {
       axios({
         url: url,

@@ -27,7 +27,7 @@ const EditLead = ({ id, Title, Client, Number, Email, Address }) => {
     const abortController = new AbortController();
     const signal = abortController.signal;
     const url =
-      "http://localhost:4050/api/managerdashboard/contact";
+      "https://sukriti-crm-server.herokuapp.com/api/managerdashboard/contact";
     const getResult = async () => {
       const token = localStorage.getItem("token");
       axios({
@@ -63,7 +63,7 @@ const EditLead = ({ id, Title, Client, Number, Email, Address }) => {
     };
     axios
       .put(
-        `http://localhost:4050/api/managerdashboard/contact/${id}`,
+        `https://sukriti-crm-server.herokuapp.com/api/managerdashboard/contact/${id}`,
         request
       )
       .then((res) => {

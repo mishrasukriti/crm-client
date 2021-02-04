@@ -16,7 +16,7 @@ const ServiceRequest = () => {
   useEffect(() => {
     const getServiceRequest = async () => {
       const url =
-        "http://localhost:4050/api/employeedashboard/servicerequest";
+        "https://sukriti-crm-server.herokuapp.com/api/employeedashboard/servicerequest";
       const token = localStorage.getItem("token");
       axios({
         url: url,

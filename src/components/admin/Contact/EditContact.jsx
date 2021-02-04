@@ -37,7 +37,7 @@ const EditLead = () => {
     };
     axios
       .put(
-        `http://localhost:4050/api/admindashboard/contact/${id}`,
+        `https://sukriti-crm-server.herokuapp.com/api/admindashboard/contact/${id}`,
         response
       )
       .then((res) => {

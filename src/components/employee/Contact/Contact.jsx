@@ -15,7 +15,7 @@ const Contact = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const url = `http://localhost:4050/api/employeedashboard/contact`;
+    const url = `https://sukriti-crm-server.herokuapp.com/api/employeedashboard/contact`;
     const getContacts = () => {
       axios({
         url: url,

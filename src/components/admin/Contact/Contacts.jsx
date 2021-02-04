@@ -15,7 +15,7 @@ const Contacts = ({ match }) => {
   const [view, setView] = useState("noedit");
 
   const url =
-    "http://localhost:4050/api/admindashboard/contact";
+    "https://sukriti-crm-server.herokuapp.com/api/admindashboard/contact";
 
   const delContact = (id) => {
     const token = localStorage.getItem("token");

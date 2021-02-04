@@ -8,15 +8,14 @@ import axios from "axios";
 const PasswordReset = () => {
     const [password, setPassword] = useState("");
     const [reEnteredpPassword, setReEnteredpPassword] = useState("");
-    const [isLoading, setLoading] = useState(false);
 
     const successNotify = () => toast.success("Password updated successfully");
 
     const history = useHistory();
     const [showPasswordError, setShowPasswordError] = useState(false);
     
-    const url = `http://localhost:4050/api/employee/verifyPasswordChange`;
-    const updatePasswordurl = `http://localhost:4050/api/employee/updatePassword`;
+    const url = `https://sukriti-crm-server.herokuapp.com/api/employee/verifyPasswordChange`;
+    const updatePasswordurl = `https://sukriti-crm-server.herokuapp.com/api/employee/updatePassword`;
     
 
 

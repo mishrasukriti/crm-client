@@ -16,7 +16,7 @@ const AddForm = () => {
   const failedNotify = (message) => toast.error(message);
 
   const url =
-    "http://localhost:4050/api/employeedashboard/lead";
+    "https://sukriti-crm-server.herokuapp.com/api/employeedashboard/lead";
   const addLead = (e) => {
     const token = localStorage.getItem("token");
     const senderEmail = localStorage.getItem("email");

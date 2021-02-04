@@ -42,7 +42,7 @@ const EditService = ({
     const abortController = new AbortController();
     const signal = abortController.signal;
     const url =
-      "http://localhost:4050/api/managerdashboard/servicerequest";
+      "https://sukriti-crm-server.herokuapp.com/api/managerdashboard/servicerequest";
     const getResult = async () => {
       const token = localStorage.getItem("token");
       axios({
@@ -84,7 +84,7 @@ const EditService = ({
     };
     axios
       .put(
-        `http://localhost:4050/api/managerdashboard/servicerequest/${id}`,
+        `https://sukriti-crm-server.herokuapp.com/api/managerdashboard/servicerequest/${id}`,
         response
       )
       .then((res) => {

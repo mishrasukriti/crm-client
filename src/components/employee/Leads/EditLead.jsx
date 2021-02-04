@@ -28,7 +28,7 @@ const EditLead = ({ id, Title, Client, Number, Status }) => {
     const abortController = new AbortController();
     const signal = abortController.signal;
     const url =
-      "http://localhost:4050/api/employeedashboard/lead";
+      "https://sukriti-crm-server.herokuapp.com/api/employeedashboard/lead";
     const getResult = async () => {
       const token = localStorage.getItem("token");
       axios({
@@ -67,7 +67,7 @@ const EditLead = ({ id, Title, Client, Number, Status }) => {
     };
     axios
       .put(
-        `http://localhost:4050/api/employeedashboard/lead/${id}`,
+        `https://sukriti-crm-server.herokuapp.com/api/employeedashboard/lead/${id}`,
         request
       )
       .then((res) => {

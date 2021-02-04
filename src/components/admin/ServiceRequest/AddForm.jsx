@@ -23,7 +23,7 @@ const AddForm = () => {
   const failedNotify = (message) => toast.error(message);
 
   const url =
-    "http://localhost:4050/api/admindashboard/servicerequest";
+    "https://sukriti-crm-server.herokuapp.com/api/admindashboard/servicerequest";
 
   const addServiceRequest = (e) => {
     setIsLoading(true);
