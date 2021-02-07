@@ -40,7 +40,7 @@ const EmployeeLogin = () => {
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("spAccessValue", response.data.spAccessValue);
           localStorage.setItem("email", email);
-          history.push("/employeedashboard/servicerequest");
+          history.push("/employeedashboard/dashboardMain");
         }
       })
       .catch((err) => {
