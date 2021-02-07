@@ -39,7 +39,7 @@ const AdminLogin = () => {
           setLoading(false);
           localStorage.setItem("token", response.data);
           localStorage.setItem("email", email);
-          history.push("/admindashboard/servicerequest");
+          history.push("/admindashboard/dashboardMain");
         }
       })
       .catch((err) => {
