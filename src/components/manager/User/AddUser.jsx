@@ -54,7 +54,8 @@ const AddUser = () => {
       })
       .catch((error) => {
         console.log(error);
-        failedNotify("Failed to Add User");
+        //failedNotify("Failed to Add User");
+        failedNotify(JSON.stringify(error));
       });
   
     
