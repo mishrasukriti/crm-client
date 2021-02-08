@@ -36,6 +36,10 @@ import ManagerContact from "./components/manager/Contact/Contact";
 import ManagerAddContact from "./components/manager/Contact/AddForm";
 import ManagerContacts from "./components/manager/Contact/Contacts";
 
+import ManagerAddUser from "./components/manager/User/AddUser";
+import ManagerAllUsers from "./components/manager/User/AllUser";
+
+
 //EMPLOYEE ROUTES
 import EmployeeLogin from "./components/employee/EmployeeLogin";
 
@@ -169,6 +173,17 @@ const App = () => {
             component={ManagerContacts}
           />
           <Route path="/manager/passwordreset" exact component={() => <ManagerPasswordReset />} />
+          <Route
+            path="/managerdashboard/allusers"
+            exact
+            component={ManagerAllUsers}
+          />
+          <Route
+            path="/managerdashboard/adduser"
+            exact
+            component={ManagerAddUser}
+          />
+
           <Route
             path="/employeelogin"
             exact

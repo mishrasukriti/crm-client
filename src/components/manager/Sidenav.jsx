@@ -47,6 +47,15 @@ const Sidenav = () => {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              to="/managerdashboard/allusers"
+              className="nav-items"
+              activeClassName={`nav-items active`}
+            >
+              <i className="fa fa-users" aria-hidden="true"></i>  All Users
+            </NavLink>
+          </li>
+          <li>
             <Link
               onClick={() => delToken()}
               to="/managerlogin"

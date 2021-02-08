@@ -9,7 +9,6 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 const AllUsers = () => {
   const [isLoading, setLoading] = useState(true);
   const [users, setUsers] = useState([]);
-  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const CancelToken = axios.CancelToken;
@@ -42,27 +41,7 @@ const AllUsers = () => {
     };
   }, []);
 
-  const delUser = (email) => {
-    setUsers(users.filter((user) => user.email !== email));
-    console.log("delete");
-    const response = {
-      email: email,
-    };
-    console.log(response);
-    fetch("https://sukriti-crm-server.herokuapp.com/api/admin/deleteuser", {
-      method: "DELETE",
-      headers: {
-        "auth-token": token,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(response),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert(data);
-      });
-  };
+  
   return (
     <React.Fragment>
       {isLoading && (
@@ -73,7 +52,7 @@ const AllUsers = () => {
           <div className="main-content">
             <div className="header">
               <div className="title">All Users</div>
-              <Link to="/admindashboard/addUser">
+              <Link to="/managerdashboard/addUser">
                 <button type="button">
                   Add <i className="material-icons">&#xe147;</i>
                 </button>
@@ -97,7 +76,7 @@ const AllUsers = () => {
           <div className="main-content">
             <div className="header">
               <div className="title">All Users</div>
-              <Link to="/admindashboard/addUser">
+              <Link to="/managerdashboard/addUser">
                 <button type="button">
                   Add <i className="material-icons">&#xe147;</i>
                 </button>
@@ -131,15 +110,7 @@ const AllUsers = () => {
                       <p>{result.type}</p>
                     </li>
                   </ul>
-                  <div
-                    className="button-container"
-                    style={{ paddingBottom: "0.2rem" }}
-                  >
-                    <button type="button" onClick={() => delUser(result.email)}>
-                      Delete
-                      <i className="material-icons">&#xe872;</i>
-                    </button>
-                  </div>
+                 
                 </div>
               ))}
             </div>
